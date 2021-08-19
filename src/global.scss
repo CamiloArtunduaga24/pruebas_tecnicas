@@ -1,0 +1,155 @@
+/* Proyect css */
+@import "./assets/scss/colors.scss";
+@import "./assets/scss/inputs.scss";
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+//INPUT
+.input-label {
+  color: $blue;
+}
+
+ion-input {
+  border: 1px solid #b9b9b9;
+  margin-top: 12px;
+  border-radius: 5px;
+}
+
+.sc-ion-input-ios-h {
+  --placeholder-color: black;
+  --placeholder-opacity: 1;
+  --padding-start: 12px;
+}
+
+.input-container {
+  margin: auto;
+  width: 340px;
+}
+
+//MARGIN
+.margin-t-16 {
+  margin-top: 16px;
+}
+.margin-t-36 {
+  margin-top: 36px;
+}
+.margin-t-42 {
+  margin-top: 42px;
+}
+.margin-t-52 {
+  margin-top: 52px;
+}
+
+:root {
+  /*===== Colores =====*/
+
+  --first-color: #1a73e8;
+  --input-color: #80868b;
+  --border-color: #dadce0;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 16px;
+  --small-font-size: 12px;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.ancho {
+  padding: 0 10% 0 10%;
+}
+
+.l-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form {
+  width: 360px;
+  padding: 64px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+.form__div {
+  position: relative;
+
+  height: 60px;
+  margin-bottom: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.form__input {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  outline: none;
+  padding: 16px;
+  background: none;
+  z-index: 1;
+}
+.form__label {
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  padding: 0 1px;
+  background-color: #fff;
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+
+/*Input focus move up label*/
+.form__input:focus + .form__label {
+  top: -8px;
+  left: 10px;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus sticky top label*/
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -8px;
+  left: 10px;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus*/
+.form__input:focus {
+  border: 1.5px solid var(--first-color);
+}
+
+// BACKDROP
+ion-backdrop {
+  background-color: var(--ion-backdrop-color, #014171);
+}

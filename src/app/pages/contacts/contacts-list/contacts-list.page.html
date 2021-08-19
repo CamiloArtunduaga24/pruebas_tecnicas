@@ -1,0 +1,77 @@
+<ion-toolbar mode="md" class="margin-t-16">
+  <ion-buttons slot="start">
+    <ion-button>
+      <ion-icon
+        slot="icon-only"
+        name="arrow-back-circle"
+        color="primary"
+      ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-text size="large" class="center">
+    {{ 'page.contacts.list.select' | translate }}
+  </ion-text>
+  <ion-buttons slot="end">
+    <ion-button (click)="searchContacts()">
+      <ion-icon
+        slot="icon-only"
+        name="refresh"
+        color="primary"
+        class="refresh-button"
+      ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content class="ion-padding" mode="md">
+  <ion-list>
+    <ion-title size="small">
+      {{ 'page.contacts.list.warning' | translate }}
+    </ion-title>
+
+    <app-contact-empty *ngIf="!vacio"></app-contact-empty>
+
+    <ion-searchbar
+      *ngIf="vacio"
+      placeholder="{{ 'page.contacts.list.search' | translate }}"
+      mode="md"
+      (keyup)="onKeyUp($event)"
+      (ionClear)="onClear($event)"
+    >
+    </ion-searchbar>
+    <ion-item
+      *ngIf="vacio"
+      (ionChange)="checkAll($event)"
+      [hidden]="hiddenToSearch"
+    >
+      <ion-checkbox color="primary"></ion-checkbox>
+      <ion-title size="small"> 
+        {{ 'page.contacts.list.select-all' | translate }}
+      </ion-title>
+    </ion-item>
+
+    <ion-item-sliding>
+      <ion-item *ngFor="let contact of contactsResult">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label
+          ><b class="names"
+            >{{ contact.name.givenName }} {{ contact.name.familyName }}</b
+          >
+          <p>{{ contact.phoneNumbers [ 0 ].value }}</p>
+        </ion-label>
+        <ion-checkbox slot="end" [checked]="checkboxAll"></ion-checkbox>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border translucent" mode="ios">
+  <ion-toolbar>
+    <ion-button *ngIf="vacio" expand="block" (click)="verify()">
+      {{ 'page.contacts.list.import' | translate }}
+    </ion-button>
+    <ion-button *ngIf="!vacio" expand="block" (click)="continuar()">
+      {{ 'page.contacts.list.next' | translate }}
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

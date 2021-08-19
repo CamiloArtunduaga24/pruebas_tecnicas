@@ -1,0 +1,45 @@
+<ion-content>
+  <app-header></app-header>
+  <div class="above">
+    <ion-img src="assets/img/Phone.png" class="img-phone"></ion-img>
+    <ion-text class="permit-title">
+      {{ 'page.contacts.permission.contacts' | translate }}
+    </ion-text>
+  </div>
+
+  <div class="down">
+    <div class="text-contact-container">
+      <p>{{ 'page.contacts.permission.explication' | translate }}</p>
+    </div>
+
+    <div class="align-btn">
+      <ion-button
+        class="margin-b-16"
+        type="submit"
+        color="cian"
+        (click)="contactAlert()"
+      >
+        <ion-icon class="icon" slot="start" name="book-outline"></ion-icon>
+        {{ 'page.contacts.permission.import' | translate }}
+      </ion-button>
+
+      <ion-button
+        class="margin-b-16"
+        type="submit"
+        color="dark-blue"
+        (click)="onClick()"
+      >
+        <ion-icon
+          class="icon"
+          slot="start"
+          name="person-add-outline"
+        ></ion-icon>
+        {{ 'page.contacts.permission.create' | translate }}
+      </ion-button>
+    </div>
+
+    <div class="text-footer">
+      <p>*{{ 'page.contacts.permission.warning' | translate }}.</p>
+    </div>
+  </div>
+</ion-content>

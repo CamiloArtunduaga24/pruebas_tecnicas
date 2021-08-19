@@ -1,0 +1,87 @@
+body {
+  width: 100%;
+}
+
+ion-button {
+  display: flex;
+  margin: auto;
+  width: 166px;
+  height: 40px;
+  letter-spacing: 1.68px;
+  opacity: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
+.img-phone {
+  width: 30%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.permit-title {
+  color: #0463a9;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: grid;
+}
+
+.above {
+  height: 40%;
+  margin: 1% 1%;
+  display: grid;
+}
+.down {
+  height: 60%;
+  background: #f2f6fe;
+}
+
+.text-contact-container {
+  padding-top: 35px;
+  font-size: 14px;
+  color: #4d4d4d;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.margin-b-16 {
+  width: 45%;
+  height: 40px;
+  margin-bottom: 13px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 16px;
+  --border-radius: 10px;
+}
+
+.text-footer {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #4d4d4d;
+  padding: 1px 32px 12px 32px;
+}
+
+.align-btn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  font-weight: bolder;
+  font-size: 20px;
+}

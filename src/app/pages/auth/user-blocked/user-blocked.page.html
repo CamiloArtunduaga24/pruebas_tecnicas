@@ -1,0 +1,21 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <img src="assets/img/arrow.png" class="back" (click)="backpage()" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img src="./assets/img/Logo.png" class="img-logo"></ion-img>
+  <ion-img src="./assets/img/form-login.png" class="img-form-login"></ion-img>
+
+  <div class="container">
+    <ion-icon name="alert-circle-outline" class="icon-position"></ion-icon>
+  </div>
+  <ion-text class="user-block-title">
+    {{ 'page.auth.user-blocked.account-blocked' | translate}}
+  </ion-text>
+  <div class="text-user-blocked">
+    <p>{{ 'page.auth.user-blocked.limit' | translate }}</p>
+    <p class="color">{{ 'page.auth.user-blocked.email' | translate }}</p>
+  </div>
+</ion-content>

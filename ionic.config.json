@@ -1,0 +1,7 @@
+{
+  "name": "TitanAppFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

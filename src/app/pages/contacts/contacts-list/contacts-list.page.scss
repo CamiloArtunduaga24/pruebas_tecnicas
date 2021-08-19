@@ -1,0 +1,114 @@
+ion-label {
+  color: #0f75e9 !important;
+  font-weight: bold;
+}
+ion-label p {
+  color: #7a7a7a !important;
+  font-weight: lighter;
+}
+ion-icon {
+  color: #0f75e9 !important;
+}
+
+ion-item {
+  --border-color: transparent !important;
+}
+.sc-ion-searchbar-md-h {
+  --border-radius: 30px;
+}
+.sc-ion-searchbar-ios-h {
+  --border-radius: 30px;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+  color: #0d4866;
+  text-anchor: 10px;
+}
+
+ion-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ion-toolbar {
+  text-align: center;
+}
+
+ion-button {
+  display: flex;
+  margin: auto;
+  width: 350px;
+  letter-spacing: 2px;
+  border-radius: 1px !important;
+  --ion-color-primary: #0a9efc !important;
+}
+
+ion-footer {
+  display: block;
+  position: relative;
+  -ms-flex-order: 1;
+  order: 1;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 10px 10px 10px;
+}
+
+ion-item-sliding ion-item ion-checkbox {
+  --background: transparent;
+  --border-color: transparent;
+  --background-checked: transparent;
+  --border-color-checked: transparent;
+  --checkmark-color: rgb(8, 214, 8);
+  --checkmark-width: 1;
+  --transition: none;
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  z-index: 2;
+}
+
+.sc-ion-buttons-md-s ion-button {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --box-shadow: none;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 32px;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.sc-ion-buttons-md-s .button-has-icon-only.button-clear {
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --border-radius: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.ion-color-primary {
+  --ion-color-base: #0d4866 !important;
+}
+
+.refresh-button {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --box-shadow: none;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 32px;
+  font-size: 25px;
+  font-weight: 500;
+}

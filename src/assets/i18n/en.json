@@ -1,0 +1,91 @@
+{
+    "components": {
+      "contact-empty": {
+        "no-contacts": "No se encontraron contactos para importar"
+      }
+    },
+    "page.auth": {
+      "login": {
+        "title": "Iniciar sesión",
+        "user": "Usuario",
+        "password": "Contraseña",
+        "start": "INICIAR",
+        "noPassword": "Olvidé mi contraseña",
+        "postulate": "¿Aún no tienes una cuenta? Postúlate como Titán haciendo clic",
+        "here": "aquí"
+      },
+      "restore-password": {
+        "generics": {
+          "title": "Olvidé mi contraseña",
+          "recover": "RECUPERAR CONTRASEÑA"
+        },
+        "id": {
+          "id-label": "Ingresa el documento de identidad registrado"
+        },
+        "select": {
+          "select-recover": "Selecciona el medio por el cuál quieres recibir el código de recuperación"
+        },
+        "email": {
+          "select-email": "Escribe el correo seleccionado",
+          "email": "Correo",
+          "send": "ENVIAR"
+        },
+        "code": {
+          "email-send": "ingresa el código enviado al correo",
+          "code": "Código",
+          "verify": "VERIFICAR"
+        },
+        "change": {
+          "title": "Cambiar contraseña",
+          "new-password": "Nueva contraseña",
+          "no-conditions": "Contraseña no cumple las condiciones",
+          "confirm": "Confirmar contraseña",
+          "no-match": "Contraseña no coincide",
+          "conditions": "La contraseña debe tener almenos",
+          "upper": "Una letra mayúscula",
+          "lyrics": "Una letra",
+          "number": "Un número",
+          "special": "Un carácter especial",
+          "characters": "caracteres",
+          "change": "CAMBIAR"
+        }
+      },
+      "user-blocked": {
+        "account-blocked": "Cuenta bloqueada",
+        "limit": "Haz superado el número de máximo de intentos para ingresar a tu cuenta. Comunicate con Gran Titán al siguiente correo:",
+        "email": "soporte@grantitan.com"
+      }
+    },
+    "page.contacts": {
+      "permission": {
+        "contacts": "Mis Contactos",
+        "explication": "A continuación podrás importar los números de contacto que tienes guardados en tu celular con tu app de Gran Titán, o crear los que necesites.",
+        "import": "Importar",
+        "create": "Crear",
+        "warning": "Los datos ingresados son propiedad exclusiva del Titán"
+      },
+      "list": {
+        "select": "Seleccionar contacto(s) para importar",
+        "warning": "Los datos ingresados pertenecen al titán no a Gran Titán",
+        "search": "Buscar Contacto ",
+        "select-all": "Seleccionar Todos",
+        "import": "IMPORTAR",
+        "next": "CONTINUAR"
+      }
+    },
+    "page.home": {
+      "menu": {
+        "hello": "Hola",
+        "user": "Usuario",
+        "memory": "Memory Jogger",
+        "finance": "Mis Finanzas",
+        "oportunities": "Gestor de Oportunidades"
+      }
+    },
+    "tabs": {
+      "home": "Home",
+      "profile": "Mi Perfil",
+      "notifications": "Notificaciones"
+    }
+  }
+  

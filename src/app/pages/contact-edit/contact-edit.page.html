@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contact-edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formulario">
+    <div class="separar" *ngIf="contacto">
+      <ion-input
+        *ngIf="cambio"
+        [disabled]="edit"
+        class="input"
+        type="text"
+        placeholder="1"
+      >
+        {{ contacto.name }}
+      </ion-input>
+      <ion-input
+        *ngIf="!cambio"
+        class="input_2"
+        [disabled]="edit"
+        type="text"
+        placeholder="1"
+        >{{ contacto.name }}
+      </ion-input>
+      <ion-input
+        *ngIf="cambio"
+        [disabled]="edit"
+        class="input"
+        type="text"
+        placeholder="2"
+      >
+        {{ contacto.username }}
+      </ion-input>
+      <ion-input
+        *ngIf="!cambio"
+        class="input_2"
+        [disabled]="edit"
+        type="text"
+        placeholder="2"
+        >{{ contacto.username }}
+      </ion-input>
+    </div>
+  </form>
+
+  <ion-button (click)="activateContactData()" color="cian"
+    >habilitar</ion-button
+  >
+</ion-content>

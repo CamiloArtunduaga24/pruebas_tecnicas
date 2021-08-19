@@ -1,0 +1,75 @@
+<ion-content>
+  <div class="content-title">
+    <label class="title-menu">
+      {{ 'page.home.menu.hello' | translate }}, Andrés
+    </label>
+  </div>
+
+  <ion-slides
+    class="slides-menu"
+    pager="true"
+    #slidesRef
+    (ionSlideDidChange)="onSlideMoved($event)"
+    [options]="slideOpts"
+  >
+    <ion-slide>
+      <img src="assets/img/baner1.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/baner2.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/baner3.jpg" />
+    </ion-slide>
+  </ion-slides>
+
+  <div class="container">
+    <div class="item-menu" (click)="permisoContactos()">
+      <div class="content">
+        <img src="assets/img/Phone.png" class="img-menu" />
+        <label>{{ 'page.home.menu.user' | translate }}</label>
+      </div>
+    </div>
+    <div class="item-menu" (click)="toUserBlock()">
+      <div class="content">
+        <img src="assets/img/Memory.png" class="img-menu" />
+        <label>{{ 'page.home.menu.memory' | translate }}</label>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="item-menu">
+      <div class="content">
+        <img src="assets/img/Finanzas.png" class="img-menu" />
+        <label>{{ 'page.home.menu.finance' | translate }}</label>
+      </div>
+    </div>
+    <div class="item-menu">
+      <div class="content">
+        <img src="assets/img/Gestor.png" class="img-menu" />
+        <label>{{ 'page.home.menu.oportunities' | translate }}</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+      <div class="item-menu" (click)="permisoContactos()">
+        <img src="assets/img/Phone.png" class="img-menu" />
+        <label>{{ 'page.home.menu.user' | translate }}</label>
+      </div>
+      <div class="item-menu" (click)="toUserBlock()">
+        <img src="assets/img/Memory.png" class="img-menu" />
+        <label>{{ 'page.home.menu.memory' | translate }}</label>
+      </div>
+    </div>
+    <div class="menu-down">
+      <div class="item-menu">
+        <img src="assets/img/Finanzas.png" class="img-menu" />
+        <label>{{ 'page.home.menu.finance' | translate }}</label>
+      </div>
+      <div class="item-menu">
+        <img src="assets/img/Gestor.png" class="img-menu" />
+        <label>{{ 'page.home.menu.oportunities' | translate }}</label>
+      </div>
+    </div> -->
+</ion-content>

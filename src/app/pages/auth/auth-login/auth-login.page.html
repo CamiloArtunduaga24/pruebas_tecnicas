@@ -1,0 +1,77 @@
+<ion-content color="0es3secondary">
+  <ion-img src="./assets/img/Logo.png" class="img-login"></ion-img>
+  <ion-img src="./assets/img/form-login.png" class="img-form-login"></ion-img>
+  <ion-text class="login-title">
+    {{ 'page.auth.login.title' | translate }}
+  </ion-text>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="input-container margin-t-42">
+      <div class="form__div">
+        <input
+          type="text"
+          class="form__input"
+          placeholder=" "
+          formControlName="email"
+        />
+        <label for="" class="form__label"
+          >{{ 'page.auth.login.user' | translate }}</label
+        >
+        <ion-icon
+          name="alert-circle-outline"
+          slot="end"
+          class="icon-position-user"
+          *ngIf="repsonseAuth?.code===404"
+        >
+        </ion-icon>
+        <p class="error-msj-input-user">
+          {{repsonseAuth?.code===404 ? repsonseAuth?.msj:' '}}
+        </p>
+      </div>
+
+      <div class="form__div">
+        <input
+          type="password"
+          class="form__input"
+          placeholder=" "
+          formControlName="password"
+        />
+        <label for="" class="form__label"
+          >{{ 'page.auth.login.password' | translate }}</label
+        >
+        <ion-icon
+          name="alert-circle-outline"
+          slot="end"
+          class="icon-position-password"
+          *ngIf="repsonseAuth?.code===400"
+        >
+        </ion-icon>
+        <p class="error-msj-input-password">
+          {{repsonseAuth?.code===400 ? repsonseAuth?.msj:' '}}
+        </p>
+      </div>
+    </div>
+
+    <ion-button
+      type="submit"
+      class="btn"
+      color="cian"
+      [disabled]=" loginForm.invalid"
+    >
+      {{ 'page.auth.login.start' | translate }}
+    </ion-button>
+  </form>
+
+  <div class="text-login-container">
+    <p>
+      <a (click)="redirectRePassword()"
+        >{{ 'page.auth.login.noPassword' | translate }}</a
+      >
+    </p>
+    <p>
+      {{ 'page.auth.login.postulate' | translate }}
+      <a [routerLink]="['/auth/login-phone']"
+        >{{ 'page.auth.login.here' | translate }}.</a
+      >
+    </p>
+  </div>
+</ion-content>
