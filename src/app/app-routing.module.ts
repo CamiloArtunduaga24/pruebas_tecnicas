@@ -37,7 +37,11 @@ const routes: Routes = [
       import('./pages/lista-prueba/lista-prueba.module').then(
         (m) => m.ListaPruebaPageModule
       ),
+  },  {
+    path: 'whatsapp',
+    loadChildren: () => import('./pages/whatsapp/whatsapp.module').then( m => m.WhatsappPageModule)
   },
+
 ];
 @NgModule({
   imports: [

@@ -1,6 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonSlides, ModalController, NavController, NavParams } from '@ionic/angular';
+import {
+  IonSlides,
+  ModalController,
+  NavController,
+  NavParams,
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-menu',
@@ -41,6 +46,6 @@ export class MenuPage implements OnInit {
     });
   }
   toUserBlock() {
-    this.route.navigateByUrl('auth/user-blocked');
+    this.route.navigateByUrl('whatsapp');
   }
 }
